@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Header</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+  <ion-row>
+    <ion-col [ngClass]="{'ion-hide' : showTextFlag}">
+      <div>
+        <h3>hidden</h3>
+        You can't see me.
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    
+    <ion-col>
+      <div>
+        <h3>not-hidden</h3>
+        You can see me!
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+        <ion-button (click)="toggleShowText()">Default</ion-button>
+        <ion-button [routerLink]="['/tabs']">Go to detail</ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="navigate()">Go to detail</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
