@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class UserDetailPage implements OnInit, OnDestroy {
   
   showTextFlag: boolean = true;
+  teste = "ttttt";
 
   constructor(private router: Router) { }
 
