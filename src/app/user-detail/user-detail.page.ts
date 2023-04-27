@@ -9,26 +9,14 @@ import { Router } from '@angular/router';
   selector: 'app-user-detail',
   templateUrl: './user-detail.page.html',
   styleUrls: ['./user-detail.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RouterModule],
 })
 export class UserDetailPage implements OnInit, OnDestroy {
-  constructor(private router: Router) {}
+  
   showTextFlag: boolean = true;
 
+  constructor(private router: Router) { }
+
   ngOnInit() {
-    console.log('oninit');
-  }
-
-  toggleShowText() {
-    console.log('toggleShowText');
-    console.log(this.showTextFlag);
-    this.showTextFlag = !this.showTextFlag;
-    console.log(this.showTextFlag);
-  }
-
-  navigate() {
-    this.router.navigate(['/tabs'], { replaceUrl: true });
   }
 
   ionViewWillEnter() {
@@ -50,4 +38,16 @@ export class UserDetailPage implements OnInit, OnDestroy {
   ngOnDestroy() {
     console.log('ngOnDestroy');
   }
+
+  toggleShowText() {
+    console.log('toggleShowText');
+    console.log(this.showTextFlag);
+    this.showTextFlag = !this.showTextFlag;
+    console.log(this.showTextFlag);
+  }
+
+  navigate() {
+    this.router.navigate(['/tabs'], { replaceUrl: true });
+  }
+
 }
