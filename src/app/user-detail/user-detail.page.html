@@ -4,6 +4,50 @@
   </ion-toolbar>
 </ion-header>
 
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div [ngClass]="{'ion-hide' : showTextFlag}">
+        JARG
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="mostrarEsconder()">
+        Mostrar esconder
+      </ion-button>
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input [(ngModel)]="userName"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <h3>
+        {{userName}}
+      </h3>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
 <ion-grid>
   <ion-row>
     <ion-col [ngClass]="{'ion-hide' : showTextFlag}">

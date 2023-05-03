@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-detail.page.scss'],
 })
 export class UserDetailPage implements OnInit, OnDestroy {
-  
+  userName: String = 'jarg';
   showTextFlag: boolean = true;
   teste = "ttttt";
 
@@ -49,6 +49,16 @@ export class UserDetailPage implements OnInit, OnDestroy {
 
   navigate() {
     this.router.navigate(['/tabs'], { replaceUrl: true });
+  }
+
+  mostrarEsconder() {
+    console.log("mostrarEsconder()");
+    console.log(this.showTextFlag);
+    
+    let temp = ! this.showTextFlag;
+    this.showTextFlag = temp;
+
+    this.userName = this.userName + " Fcp campião";
   }
 
 }
