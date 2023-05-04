@@ -13,7 +13,8 @@
           {{item.name}}
           <ion-icon name="star" slot="start"></ion-icon>
           <ion-label>Default Item Lines</ion-label>
-          <ion-icon (click)="test(item.id)" name="information-circle" slot="end"></ion-icon>
+          <ion-icon (click)="getProductsDetails(item.id)" name="information-circle" slot="end"></ion-icon>
+          <ion-icon (click)="getProductDetailsWithExtras(item.id)" name="information-circle" slot="end"></ion-icon>
         </ion-item>
       </ion-list>
     </ion-col>

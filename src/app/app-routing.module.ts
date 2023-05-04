@@ -17,6 +17,22 @@ const routes: Routes = [
   {
     path: 'tasks',
     loadChildren: () => import('./tasks/tasks.module').then( m => m.TasksPageModule)
+  },
+  {
+    path: 'task',
+    loadChildren: () => import('./task/task.module').then( m => m.TaskPageModule)
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
+  },
+  {
+    path: 'product-pass-data',
+    loadChildren: () => import('./product-pass-data/product-pass-data.module').then( m => m.ProductPassDataPageModule)
+  },
+  {
+    path: 'product-pass-data-nav-params',
+    loadChildren: () => import('./product-pass-data-nav-params/product-pass-data-nav-params.module').then( m => m.ProductPassDataNavParamsPageModule)
   }
 ];
 @NgModule({
