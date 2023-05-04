@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 
@@ -10,7 +11,19 @@ import { Router } from '@angular/router';
   templateUrl: './user-detail.page.html',
   styleUrls: ['./user-detail.page.scss'],
 })
+
 export class UserDetailPage implements OnInit, OnDestroy {
+  numeroUm = 200;
+  numeroDois = 440;
+
+  numeroUmT2 = "Beragaaaaa!!!";
+  numeroDoisT2 = 0;
+
+
+  resultado = "Sem nada!!!";
+  resultadoT2 = "Fcp Campião!!! ó murcum!!!"; 
+
+
   userName: String = 'jarg';
   showTextFlag: boolean = true;
   teste = "ttttt";
@@ -59,6 +72,20 @@ export class UserDetailPage implements OnInit, OnDestroy {
     this.showTextFlag = temp;
 
     this.userName = this.userName + " Fcp campião";
+  }
+
+  // Implementar a funçºao do btn Soma versão final
+  somaFinal() {
+    console.log("SomaFinal");
+    console.log("num1", this.numeroUm);
+    console.log("num2", this.numeroDois);
+
+    this.resultado = "" + 
+    this.numeroUm + this.numeroDois;
+  }
+
+  concatenarT2() {
+    this.resultadoT2 = this.numeroUmT2 + " " + this.numeroDoisT2;
   }
 
 }

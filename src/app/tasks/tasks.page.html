@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        teste
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button 
+          (click)="mostraQualquerCoisinha()">
+          Olha que é para apagar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-list-header>
+            <ion-label>Tarefas a realizar</ion-label>
+          </ion-list-header>
+          <ion-item *ngFor="let task of tasks">
+            <ion-label>{{task.id}}</ion-label>
+            <ion-label>{{task.name}}</ion-label>
+            <ion-label>{{task.description}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

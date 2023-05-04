@@ -8,6 +8,104 @@
 <ion-grid>
   <ion-row>
     <ion-col>
+      <span>
+        {{resultadoT2}}
+      </span>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input [(ngModel)]="numeroUmT2" label="Default input"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="numeroDoisT2" 
+          label="Default input">
+        </ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button 
+        (click)="concatenarT2()">
+        Konkatenar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input [(ngModel)]="numeroUm" label="Introduz um número:"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input [(ngModel)]="numeroDois" label="Introduz outro número:"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <span>
+        {{resultado}}
+      </span>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="somaFinal()">Soma versão final</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
       <div [ngClass]="{'ion-hide' : showTextFlag}">
         JARG
       </div>
